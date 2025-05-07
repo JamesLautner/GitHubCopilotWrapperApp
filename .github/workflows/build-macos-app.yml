@@ -82,8 +82,20 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: dist/GitHubCopilotApp-*.zip
-        draft: false
+        draft: true
         prerelease: false
         generate_release_notes: true
+        name: "GitHub Copilot App ${{ env.RELEASE_VERSION }}"
+        body: |
+          ## GitHub Copilot App ${{ env.RELEASE_VERSION }}
+          
+          A simple macOS application that provides a clean wrapper for GitHub Copilot's web interface.
+          
+          ### Installation
+          1. Download the zip file attached to this release
+          2. Extract and move GitHub Copilot.app to your Applications folder
+          3. Right-click and select "Open" the first time you run it (to bypass Gatekeeper)
+          
+          This is a development build and is not signed with an Apple Developer certificate.
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
