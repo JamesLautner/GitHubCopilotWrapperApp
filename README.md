@@ -2,6 +2,10 @@
 
 A simple macOS application that provides a clean wrapper for GitHub Copilot's web interface.
 
+## Why I Created This
+
+I built this app to create a simple, distraction-free way to use GitHub Copilot chat with my Pro subscription. This wrapper removes all the extra UI elements from the web interface to provide a clean, focused experience.
+
 ## Screenshot
 
 ![GitHub Copilot App Screenshot](screenshot.png)
