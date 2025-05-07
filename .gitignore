@@ -1,0 +1,42 @@
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Accidental .DS_Store files
+.DS_Store
+
+# VSCode specific
+.history/
+.vscode/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+injected_container.sks
+iOSInjectionProject/
