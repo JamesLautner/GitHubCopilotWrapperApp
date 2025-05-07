@@ -31,6 +31,18 @@ I built this app to create a simple, distraction-free way to use GitHub Copilot 
 3. Extract the zip and move `GitHub Copilot.app` to your Applications folder
 4. When opening for the first time, right-click the app and select "Open" to bypass Gatekeeper
 
+#### Troubleshooting: "App is damaged" Error
+
+If you see a message saying the app is "damaged and can't be opened":
+
+1. Open Terminal and run this command:
+   ```
+   xattr -cr /Applications/GitHub\ Copilot.app
+   ```
+2. Try opening the app again
+
+This happens because the app isn't signed with an Apple Developer certificate. The command removes quarantine attributes that macOS adds to downloaded files.
+
 ### Option 2: Build from Source
 
 1. Clone this repository

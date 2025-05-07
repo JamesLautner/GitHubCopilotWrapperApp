@@ -65,6 +65,11 @@ jobs:
         echo "Found app at: $APP_PATH"
         cp -R "$APP_PATH" dist/
         cd dist
+        
+        # Remove extended attributes that might cause "damaged" errors
+        echo "Removing extended attributes from app bundle..."
+        xattr -cr "GitHub Copilot.app"
+        
         # Compress the .app bundle
         APP_NAME=$(basename "$APP_PATH")
         zip -r "GitHubCopilotApp-$RELEASE_VERSION.zip" "$APP_NAME"
@@ -85,9 +90,8 @@ jobs:
         draft: true
         prerelease: false
         generate_release_notes: true
-        name: "GitHub Copilot App ${{ env.RELEASE_VERSION }}"
         body: |
-          ## GitHub Copilot App ${{ env.RELEASE_VERSION }}
+          ## GitHub Copilot App
           
           A simple macOS application that provides a clean wrapper for GitHub Copilot's web interface.
           
@@ -96,6 +100,15 @@ jobs:
           2. Extract and move GitHub Copilot.app to your Applications folder
           3. Right-click and select "Open" the first time you run it (to bypass Gatekeeper)
           
-          This is a development build and is not signed with an Apple Developer certificate.
+          ### Troubleshooting: "App is damaged" Error
+          If you see a message saying the app is "damaged and can't be opened":
+          
+          1. Open Terminal and run this command:
+             ```
+             xattr -cr /Applications/GitHub\ Copilot.app
+             ```
+          2. Try opening the app again
+          
+          This happens because the app isn't signed with an Apple Developer certificate. The command removes quarantine attributes that macOS adds to downloaded files.
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
