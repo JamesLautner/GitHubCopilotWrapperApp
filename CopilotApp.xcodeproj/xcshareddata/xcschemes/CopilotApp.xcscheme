@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1ACBA7622DCB6D3300BB8A64"
-               BuildableName = "CopilotApp.app"
+               BuildableName = "GitHub Copilot.app"
                BlueprintName = "CopilotApp"
                ReferencedContainer = "container:CopilotApp.xcodeproj">
             </BuildableReference>
