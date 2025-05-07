@@ -2,6 +2,10 @@
 
 A simple macOS application that provides a clean wrapper for GitHub Copilot's web interface.
 
+## Screenshot
+
+![GitHub Copilot App Screenshot](screenshot.png)
+
 ## Features
 
 - Clean, distraction-free interface focused on the GitHub Copilot conversation
