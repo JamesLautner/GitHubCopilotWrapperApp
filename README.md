@@ -26,7 +26,7 @@ I built this app to create a simple, distraction-free way to use GitHub Copilot 
 
 ### Option 1: Download Pre-built App (Recommended)
 
-1. Go to the [Releases](https://github.com/YOURUSERNAME/GitHubCopilotWrapperApp/releases) page on GitHub
+1. Go to the [Releases](https://github.com/JamesLautner/GitHubCopilotWrapperApp/releases) page on GitHub
 2. Download the latest `.zip` file
 3. Extract the zip and move `GitHub Copilot.app` to your Applications folder
 4. When opening for the first time, right-click the app and select "Open" to bypass Gatekeeper
